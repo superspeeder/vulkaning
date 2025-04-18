@@ -9,4 +9,5 @@
 *.spv
 /out/
 /run/logs/
+/.vscode/
 

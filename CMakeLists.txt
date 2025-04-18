@@ -30,7 +30,9 @@ add_library(neuron src/neuron/neuron.cpp
         src/neuron/dynamic_rendering_pass.cpp
         src/neuron/dynamic_rendering_pass.hpp
         src/neuron/primary_renderer.cpp
-        src/neuron/primary_renderer.hpp)
+        src/neuron/primary_renderer.hpp
+        src/neuron/pipeline.cpp
+        src/neuron/pipeline.hpp)
 target_include_directories(neuron PUBLIC src/ ${stb_SOURCE_DIR})
 target_link_libraries(neuron PUBLIC Vulkan::Headers glm::glm glfw spdlog::spdlog GPUOpen::VulkanMemoryAllocator)
 target_compile_definitions(neuron PUBLIC GLFW_INCLUDE_NONE GLFW_INCLUDE_VULKAN GLM_ENABLE_EXPERIMENTAL VULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1)
