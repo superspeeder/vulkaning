@@ -51,7 +51,7 @@ namespace neuron {
         recorder->bindPipeline(vk::PipelineBindPoint::eGraphics, pipeline);
     }
 
-    void DynamicRenderingPassRecorder::draw(const uint32_t firstVertex, const uint32_t firstInstance, const uint32_t vertexCount, const uint32_t instanceCount) const {
-        recorder->draw(firstVertex, firstInstance, vertexCount, instanceCount);
+    void DynamicRenderingPassRecorder::draw(const uint32_t vertexCount, const uint32_t instanceCount, const uint32_t firstVertex, const uint32_t firstInstance) const {
+        recorder->draw(vertexCount, instanceCount, firstVertex, firstInstance);
     }
 } // namespace neuron

@@ -32,7 +32,7 @@ namespace neuron {
         inline const vk::raii::CommandBuffer &commandBuffer() const override { return recorder.commandBuffer(); }
 
         void bindGraphicsPipeline(const vk::raii::Pipeline &pipeline) const;
-        void draw(uint32_t firstVertex, uint32_t firstInstance, uint32_t vertexCount, uint32_t instanceCount) const;
+        void draw(uint32_t vertexCount, uint32_t instanceCount, uint32_t firstVertex, uint32_t firstInstance) const;
 
       private:
         const CommandRecorder &recorder;
